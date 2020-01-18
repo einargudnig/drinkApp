@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "267743722442",
+    "firebase_url": "https://drink-app-9fc8d.firebaseio.com",
+    "project_id": "drink-app-9fc8d",
+    "storage_bucket": "drink-app-9fc8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267743722442:android:d544f60ac51f6392c2ad33",
+        "android_client_info": {
+          "package_name": "com.einargudni.drink_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267743722442-rt7oophp4qvfj3u35th9hluurq7ehom0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlVkXZCDNhlyjbyWQHnwM_JyXGzI43vF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267743722442-rt7oophp4qvfj3u35th9hluurq7ehom0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
