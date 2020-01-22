@@ -1,5 +1,9 @@
+import 'package:drink_app/models/brew.dart';
 import 'package:drink_app/services/auth.dart';
 import 'package:flutter/material.dart';
+import 'package:drink_app/services/database.dart';
+import 'package:provider/provider.dart';
+import 'package:drink_app/screens/home/brew_list.dart';
 
 class Home extends StatelessWidget {
 
@@ -7,7 +11,18 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+
+    void _showSettingsPanel() {
+      showModalBottomSheet(context: context, builder: (context) {
+        return Container(
+          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+          child: Text('bottom sheet'),
+        );
+      });
+    }
+
+    return StreamProvider<List<Brew>>.value(
+      value: DatabaseService().brews,
       child: Scaffold(
         backgroundColor: Colors.brown[50],
         appBar: AppBar(
@@ -21,9 +36,15 @@ class Home extends StatelessWidget {
               onPressed: () async {
                 await _auth.signOut();
               },
+            ),
+            FlatButton.icon(
+              icon: Icon(Icons.settings),
+              label: Text('settings'),
+              onPressed: () => _showSettingsPanel(),
             )
           ],
         ),
+        body: BrewList(),
       ),
     );
   }
