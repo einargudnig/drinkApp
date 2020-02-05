@@ -2,6 +2,7 @@ import 'package:drink_app/models/brew.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:drink_app/screens/home/brew_tile.dart';
+import 'package:drink_app/screens/home/counter.dart';
 
 class BrewList extends StatefulWidget {
   @override
@@ -17,7 +18,8 @@ class _BrewListState extends State<BrewList> {
     return ListView.builder(
       itemCount: brews.length,
       itemBuilder: (context, index) {
-        return BrewTile(brew: brews[index]);
+        //return BrewTile(brew: brews[index]);
+        return Counter();
       },
     );
   }
